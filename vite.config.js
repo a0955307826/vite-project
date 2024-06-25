@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => {
 		// 配置模組解析。通過 alias 屬性指定路徑別名，之後方便在 Code 中引用模塊路徑時簡化路徑。
 		resolve: {
 			alias: {
+				// 可以確保路徑解析是安全和一致的，特別是在需要在不同操作系統下運行的多平台專案中。
 				"@": fileURLToPath(new URL("./src", import.meta.url)),
 			},
 		},
